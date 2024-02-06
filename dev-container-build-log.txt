@@ -1,0 +1,490 @@
+[3947 ms] Dev Containers 0.338.1 over Remote - SSH 0.108.0 in VS Code 1.86.0 (05047486b6df5eb8d44b2ecd70ea3bdf775fd937).
+[3947 ms] Start: Resolving Remote
+[3961 ms] Host OS: linux 6.2.0-39-generic
+[3961 ms] Host CWD: /home/djshaw/git/djshaw/vscode-java-dependency-install-problem
+[3962 ms] Start: Run: /bin/sh 
+[3967 ms] Start: Run in host: echo ~
+[4010 ms] /home/djshaw
+[4011 ms] 
+[4011 ms] Start: Run in host: id -un
+[4054 ms] djshaw
+[4054 ms] 
+[4055 ms] Start: Run in host:  (command -v getent >/dev/null 2>&1 && getent passwd 'djshaw' || grep -E '^djshaw|^[^:]*:[^:]*:djshaw:' /etc/passwd || true)
+[4098 ms] userEnvProbe: loginInteractiveShell (default)
+[4098 ms] userEnvProbe: not found in cache
+[4098 ms] userEnvProbe shell: /bin/bash
+[4203 ms] userEnvProbe PATHs:
+Probe:     '/home/djshaw/svn/rc/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/puppetlabs/bin'
+Container: None
+[4210 ms] Setting up container for folder or workspace: /home/djshaw/git/djshaw/vscode-java-dependency-install-problem
+[4210 ms] Host authority: ssh-remote+culsu
+[4210 ms] Start: Run: wsl -l -v
+[4258 ms] Could not connect to WSL.
+[4258 ms] Command failed: wsl -l -v
+[4259 ms] 
+Copyright (c) Microsoft Corporation. All rights reserved.
+
+Usage: wsl.exe [Argument]
+
+Arguments:
+
+    --install <Options>
+        Install Windows Subsystem for Linux features. If no options are specified,
+        the recommended features will be installed along with the default distribution.
+
+        To view the default distribution as well as a list of other valid distributions,
+        use 'wsl --list --online'.
+
+        Options:
+            --distribution, -d [Argument]
+                Specifies the distribution to be downloaded and installed by name.
+
+                Arguments:
+                    A valid distribution name (not case sensitive).
+
+                Examples:
+                    wsl --install -d Ubuntu
+                    wsl --install --distribution Debian
+
+            --inbox
+                Install the optional Windows feature instead of the version available via the Microsoft Store.
+
+            --enable-wsl1
+                Enable WSL1 support with the Microsoft Store version.
+
+            --no-distribution
+                Do not install a distribution (cannot be used with --distribution).
+
+            --no-launch, -n
+                Do not launch the distribution after install.
+
+            --web-download
+                Download the most recent version of WSL from the internet instead of the Microsoft Store.
+
+    --list, -l [Options]
+        Lists distributions.
+
+        Options:
+            --online, -o
+                Displays a list of available distributions for install with 'wsl --install'.
+
+    --status
+        Show the status of Windows Subsystem for Linux.
+
+    --help
+        Display usage information.
+
+[4259 ms] 
+[4261 ms] Start: Check Docker is running
+[4261 ms] Start: Run: docker version
+[4329 ms] Client: Docker Engine - Community
+ Version:           24.0.7
+ API version:       1.43
+ Go version:        go1.20.10
+ Git commit:        afdd53b
+ Built:             Thu Oct 26 09:07:51 2023
+ OS/Arch:           linux/amd64
+ Context:           default
+
+Server: Docker Engine - Community
+ Engine:
+[4329 ms]   Version:          24.0.7
+  API version:      1.43 (minimum version 1.12)
+  Go version:       go1.20.10
+  Git commit:       311b9ff
+  Built:            Thu Oct 26 09:07:51 2023
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          1.6.26
+  GitCommit:        3dd1e886e55dd695541fdcd67420c2888645a495
+ runc:
+  Version:          1.1.10
+  GitCommit:        v1.1.10-0-g18a0cb0
+[4330 ms]  docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+[4331 ms] Start: Run: docker volume ls -q
+[4382 ms] Start: Run: docker inspect --type container cb86de69daf61ed01aebc05d1b680d9415ed095b22b56c96601aef7dbd75df0d
+[4431 ms] Start: Run: docker rm -f cb86de69daf61ed01aebc05d1b680d9415ed095b22b56c96601aef7dbd75df0d
+[4759 ms] Start: Run: docker ps -q -a --filter label=vsch.local.folder=/home/djshaw/git/djshaw/vscode-java-dependency-install-problem --filter label=vsch.quality=stable
+[4807 ms] Start: Run: docker ps -q -a --filter label=devcontainer.local_folder=/home/djshaw/git/djshaw/vscode-java-dependency-install-problem --filter label=devcontainer.config_file=/home/djshaw/git/djshaw/vscode-java-dependency-install-problem/.devcontainer/devcontainer.json
+[4855 ms] Start: Run: docker ps -q -a --filter label=devcontainer.local_folder=/home/djshaw/git/djshaw/vscode-java-dependency-install-problem
+[4902 ms] Start: Run: docker ps -q -a --filter label=devcontainer.local_folder=/home/djshaw/git/djshaw/vscode-java-dependency-install-problem
+[4953 ms] Start: Run: /home/djshaw/.vscode-remote-containers/bin/05047486b6df5eb8d44b2ecd70ea3bdf775fd937/node /home/djshaw/.vscode-remote-containers/dist/dev-containers-cli-0.338.1/dist/spec-node/devContainersSpecCLI.js read-configuration --workspace-folder /home/djshaw/git/djshaw/vscode-java-dependency-install-problem --id-label devcontainer.local_folder=/home/djshaw/git/djshaw/vscode-java-dependency-install-problem --id-label devcontainer.config_file=/home/djshaw/git/djshaw/vscode-java-dependency-install-problem/.devcontainer/devcontainer.json --log-level debug --log-format json --config /home/djshaw/git/djshaw/vscode-java-dependency-install-problem/.devcontainer/devcontainer.json --mount-workspace-git-root
+[4336 ms] @devcontainers/cli 0.56.0. Node.js v18.17.1. linux 6.2.0-39-generic x64.
+[4336 ms] Start: Run: git rev-parse --show-cdup
+[4347 ms] Start: Run: docker ps -q -a --filter label=devcontainer.local_folder=/home/djshaw/git/djshaw/vscode-java-dependency-install-problem --filter label=devcontainer.config_file=/home/djshaw/git/djshaw/vscode-java-dependency-install-problem/.devcontainer/devcontainer.json
+[5439 ms] Start: Run: /home/djshaw/.vscode-remote-containers/bin/05047486b6df5eb8d44b2ecd70ea3bdf775fd937/node /home/djshaw/.vscode-remote-containers/dist/dev-containers-cli-0.338.1/dist/spec-node/devContainersSpecCLI.js up --container-session-data-folder /tmp/devcontainers-be7d130d-d1f7-41d8-88c0-500f2f70beeb1707251447392 --workspace-folder /home/djshaw/git/djshaw/vscode-java-dependency-install-problem --workspace-mount-consistency cached --id-label devcontainer.local_folder=/home/djshaw/git/djshaw/vscode-java-dependency-install-problem --id-label devcontainer.config_file=/home/djshaw/git/djshaw/vscode-java-dependency-install-problem/.devcontainer/devcontainer.json --log-level debug --log-format json --config /home/djshaw/git/djshaw/vscode-java-dependency-install-problem/.devcontainer/devcontainer.json --default-user-env-probe loginInteractiveShell --mount type=volume,source=vscode,target=/vscode,external=true --skip-post-create --update-remote-user-uid-default on --mount-workspace-git-root
+[4743 ms] @devcontainers/cli 0.56.0. Node.js v18.17.1. linux 6.2.0-39-generic x64.
+[4743 ms] Start: Run: docker buildx version
+[4873 ms] github.com/docker/buildx v0.11.2 9872040
+[4873 ms] 
+[4873 ms] Start: Resolving Remote
+[4878 ms] Start: Run: git rev-parse --show-cdup
+[5232 ms] Start: Run: docker ps -q -a --filter label=devcontainer.local_folder=/home/djshaw/git/djshaw/vscode-java-dependency-install-problem --filter label=devcontainer.config_file=/home/djshaw/git/djshaw/vscode-java-dependency-install-problem/.devcontainer/devcontainer.json
+[5258 ms] Start: Run: docker inspect --type image mcr.microsoft.com/devcontainers/base:bullseye
+[7071 ms] Resolving Feature dependencies for 'ghcr.io/devcontainers/features/docker-in-docker:2'...
+[7071 ms] * Processing feature: ghcr.io/devcontainers/features/docker-in-docker:2
+[7411 ms] Start: Run: docker-credential-secret get
+[8023 ms] * Processing feature: ghcr.io/devcontainers/features/common-utils
+[8349 ms] Soft-dependency 'ghcr.io/devcontainers/features/common-utils' is not required.  Removing from installation order...
+[8364 ms] * Fetching feature: docker-in-docker_0_oci
+[8897 ms] * Fetched feature: docker-in-docker_0_oci version 2.8.0
+[8904 ms] Start: Run: docker buildx build --load --build-arg BUILDKIT_INLINE_CACHE=1 -f /tmp/devcontainercli-djshaw/container-features/0.56.0-1707251455361/Dockerfile-with-features -t vsc-vscode-java-dependency-install-problem-efe3b14e0944d004f4ad732af17412208d5b9b4b7ba0c4818307a4bcd74affa5 --target dev_containers_target_stage --build-context dev_containers_feature_content_source=/tmp/devcontainercli-djshaw/container-features/0.56.0-1707251455361 --build-arg _DEV_CONTAINERS_BASE_IMAGE=dev_container_auto_added_stage_label --build-arg _DEV_CONTAINERS_IMAGE_USER=root --build-arg _DEV_CONTAINERS_FEATURE_CONTENT_SOURCE=dev_container_feature_content_temp /home/djshaw/git/djshaw/vscode-java-dependency-install-problem/.devcontainer
+[+] Building 1.1s (17/17) FINISHED                               docker:default
+ => [internal] load build definition from Dockerfile-with-features         0.0s
+ => => transferring dockerfile: 2.73kB                                     0.0s
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => resolve image config for docker.io/docker/dockerfile:1.4               0.6s
+ => CACHED docker-image://docker.io/docker/dockerfile:1.4@sha256:9ba7531b  0.0s
+ => [context dev_containers_feature_content_source] load .dockerignore     0.0s
+ => => transferring dev_containers_feature_content_source: 2B              0.0s
+ => [internal] load metadata for mcr.microsoft.com/devcontainers/base:bul  0.3s
+ => [dev_container_auto_added_stage_label 1/2] FROM mcr.microsoft.com/dev  0.0s
+ => [context dev_containers_feature_content_source] load from client       0.0s
+ => => transferring dev_containers_feature_content_source: 34.96kB         0.0s
+ => CACHED [dev_container_auto_added_stage_label 2/2] RUN --mount=target=  0.0s
+ => CACHED [dev_containers_target_stage 1/4] RUN mkdir -p /tmp/dev-contai  0.0s
+ => CACHED [dev_containers_feature_content_normalize 1/2] COPY --from=dev  0.0s
+ => CACHED [dev_containers_feature_content_normalize 2/2] RUN chmod -R 07  0.0s
+ => CACHED [dev_containers_target_stage 2/4] COPY --from=dev_containers_f  0.0s
+ => CACHED [dev_containers_target_stage 3/4] RUN echo "_CONTAINER_USER_HO  0.0s
+ => CACHED [dev_containers_target_stage 4/4] RUN --mount=type=bind,from=d  0.0s
+ => preparing layers for inline cache                                      0.0s
+ => exporting to image                                                     0.0s
+ => => exporting layers                                                    0.0s
+ => => writing image sha256:3fc11d844133b92f40e5281d89ea8451ad10e073b3970  0.0s
+ => => naming to docker.io/library/vsc-vscode-java-dependency-install-pro  0.0s
+[10139 ms] Start: Run: docker inspect --type image vsc-vscode-java-dependency-install-problem-efe3b14e0944d004f4ad732af17412208d5b9b4b7ba0c4818307a4bcd74affa5
+[10157 ms] Start: Run: docker build -f /tmp/devcontainercli-djshaw/updateUID.Dockerfile-0.56.0 -t vsc-vscode-java-dependency-install-problem-efe3b14e0944d004f4ad732af17412208d5b9b4b7ba0c4818307a4bcd74affa5-uid --build-arg BASE_IMAGE=vsc-vscode-java-dependency-install-problem-efe3b14e0944d004f4ad732af17412208d5b9b4b7ba0c4818307a4bcd74affa5 --build-arg REMOTE_USER=vscode --build-arg NEW_UID=1001 --build-arg NEW_GID=1002 --build-arg IMAGE_USER=root /tmp/devcontainercli-djshaw/empty-folder
+[+] Building 0.0s (6/6) FINISHED                                 docker:default
+ => [internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                            0.0s
+ => [internal] load build definition from updateUID.Dockerfile-0.56.0      0.0s
+ => => transferring dockerfile: 1.36kB                                     0.0s
+ => [internal] load metadata for docker.io/library/vsc-vscode-java-depend  0.0s
+ => [1/2] FROM docker.io/library/vsc-vscode-java-dependency-install-probl  0.0s
+ => CACHED [2/2] RUN eval $(sed -n "s/vscode:[^:]*:\([^:]*\):\([^:]*\):[^  0.0s
+ => exporting to image                                                     0.0s
+ => => exporting layers                                                    0.0s
+ => => writing image sha256:6627f294a91e0144f24b05daad5e57e170500d84a6e61  0.0s
+ => => naming to docker.io/library/vsc-vscode-java-dependency-install-pro  0.0s
+[10323 ms] Start: Run: docker -v
+[10341 ms] Start: Run: docker events --format {{json .}} --filter event=start
+[10344 ms] Start: Starting container
+[10344 ms] Start: Run: docker run --sig-proxy=false -a STDOUT -a STDERR --mount type=bind,source=/home/djshaw/git/djshaw/vscode-java-dependency-install-problem,target=/workspaces/vscode-java-dependency-install-problem --mount type=volume,src=dind-var-lib-docker-01l0glc4pef7qh172vs2utlbbmdr4crju154fbgq5f4qqsk6osl4,dst=/var/lib/docker --mount type=volume,src=vscode,dst=/vscode -l devcontainer.local_folder=/home/djshaw/git/djshaw/vscode-java-dependency-install-problem -l devcontainer.config_file=/home/djshaw/git/djshaw/vscode-java-dependency-install-problem/.devcontainer/devcontainer.json --privileged --entrypoint /bin/sh vsc-vscode-java-dependency-install-problem-efe3b14e0944d004f4ad732af17412208d5b9b4b7ba0c4818307a4bcd74affa5-uid -c echo Container started
+Container started
+[10607 ms] Start: Run: docker ps -q -a --filter label=devcontainer.local_folder=/home/djshaw/git/djshaw/vscode-java-dependency-install-problem --filter label=devcontainer.config_file=/home/djshaw/git/djshaw/vscode-java-dependency-install-problem/.devcontainer/devcontainer.json
+[10623 ms] Start: Run: docker inspect --type container f02b1999dc94
+[10640 ms] Start: Inspecting container
+[10640 ms] Start: Run: docker inspect --type container f02b1999dc94ee0b2d19e9b1ecad88feb0e4c04b20ff6c1934947dd61b492725
+Not setting dockerd DNS manually.
+[10657 ms] Start: Run in container: /bin/sh
+[10660 ms] Start: Run in container: uname -m
+[10717 ms] x86_64
+[10717 ms] 
+[10717 ms] Start: Run in container: (cat /etc/os-release || cat /usr/lib/os-release) 2>/dev/null
+[10719 ms] PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"
+NAME="Debian GNU/Linux"
+VERSION_ID="11"
+VERSION="11 (bullseye)"
+VERSION_CODENAME=bullseye
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+[10719 ms] 
+[10720 ms] Start: Run in container:  (command -v getent >/dev/null 2>&1 && getent passwd 'vscode' || grep -E '^vscode|^[^:]*:[^:]*:vscode:' /etc/passwd || true)
+[10723 ms] Start: Run in container: test -f '/var/devcontainer/.patchEtcEnvironmentMarker'
+[10724 ms] 
+[10724 ms] 
+[10724 ms] Exit code 1
+[10724 ms] Start: Run in container: /bin/sh
+[10728 ms] Start: Run in container: test ! -f '/var/devcontainer/.patchEtcEnvironmentMarker' && set -o noclobber && mkdir -p '/var/devcontainer' && { > '/var/devcontainer/.patchEtcEnvironmentMarker' ; } 2> /dev/null
+[10763 ms] 
+[10763 ms] 
+[10763 ms] Start: Run in container: cat >> /etc/environment <<'etcEnvrionmentEOF'
+[10765 ms] 
+[10765 ms] 
+[10765 ms] Start: Run in container: test -f '/var/devcontainer/.patchEtcProfileMarker'
+[10766 ms] 
+[10766 ms] 
+[10766 ms] Exit code 1
+[10767 ms] Start: Run in container: test ! -f '/var/devcontainer/.patchEtcProfileMarker' && set -o noclobber && mkdir -p '/var/devcontainer' && { > '/var/devcontainer/.patchEtcProfileMarker' ; } 2> /dev/null
+[10770 ms] 
+[10770 ms] 
+[10770 ms] Start: Run in container: sed -i -E 's/((^|\s)PATH=)([^\$]*)$/\1${PATH:-\3}/g' /etc/profile || true
+[10774 ms] 
+[10774 ms] 
+[11673 ms] Start: Run: docker inspect --type container f02b1999dc94ee0b2d19e9b1ecad88feb0e4c04b20ff6c1934947dd61b492725
+[11726 ms] Start: Run: docker exec -i -u root f02b1999dc94ee0b2d19e9b1ecad88feb0e4c04b20ff6c1934947dd61b492725 /bin/sh -c echo "New container started. Keep-alive process started." ; export VSCODE_REMOTE_CONTAINERS_SESSION=be7d130d-d1f7-41d8-88c0-500f2f70beeb1707251447392 ; /bin/sh
+[11730 ms] Start: Run: /home/djshaw/.vscode-remote-containers/bin/05047486b6df5eb8d44b2ecd70ea3bdf775fd937/node /home/djshaw/.vscode-remote-containers/dist/dev-containers-cli-0.338.1/dist/spec-node/devContainersSpecCLI.js read-configuration --workspace-folder /home/djshaw/git/djshaw/vscode-java-dependency-install-problem --id-label devcontainer.local_folder=/home/djshaw/git/djshaw/vscode-java-dependency-install-problem --id-label devcontainer.config_file=/home/djshaw/git/djshaw/vscode-java-dependency-install-problem/.devcontainer/devcontainer.json --container-id f02b1999dc94ee0b2d19e9b1ecad88feb0e4c04b20ff6c1934947dd61b492725 --log-level debug --log-format json --config /home/djshaw/git/djshaw/vscode-java-dependency-install-problem/.devcontainer/devcontainer.json --include-merged-configuration --mount-workspace-git-root
+[11821 ms] New container started. Keep-alive process started.
+[11061 ms] @devcontainers/cli 0.56.0. Node.js v18.17.1. linux 6.2.0-39-generic x64.
+[11061 ms] Start: Run: git rev-parse --show-cdup
+[11069 ms] Start: Run: docker inspect --type container f02b1999dc94ee0b2d19e9b1ecad88feb0e4c04b20ff6c1934947dd61b492725
+[11986 ms] Start: Inspecting container
+[11987 ms] Start: Run: docker inspect --type container f02b1999dc94ee0b2d19e9b1ecad88feb0e4c04b20ff6c1934947dd61b492725
+[12035 ms] Start: Run in container: /bin/sh
+[12038 ms] Start: Run in container: uname -m
+[12153 ms] x86_64
+[12154 ms] 
+[12154 ms] Start: Run in container: (cat /etc/os-release || cat /usr/lib/os-release) 2>/dev/null
+[12198 ms] PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"
+NAME="Debian GNU/Linux"
+VERSION_ID="11"
+VERSION="11 (bullseye)"
+VERSION_CODENAME=bullseye
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+[12198 ms] 
+[12198 ms] Start: Run in container:  (command -v getent >/dev/null 2>&1 && getent passwd 'vscode' || grep -E '^vscode|^[^:]*:[^:]*:vscode:' /etc/passwd || true)
+[12242 ms] Start: Run in container: command -v git >/dev/null 2>&1 && cd '/workspaces/vscode-java-dependency-install-problem' && test -d .git && test "$(stat -c %u .)" != "$(id -u)"
+[12294 ms] 
+[12294 ms] 
+[12294 ms] Exit code 1
+[12295 ms] Start: Updating configuration state
+[12344 ms] Start: Setup shutdown monitor
+[12344 ms] Forking shutdown monitor: c:\Users\DerekShaw\.vscode\extensions\ms-vscode-remote.remote-containers-0.338.1\dist\shutdown\shutdownMonitorProcess \\.\pipe\vscode-remote-containers-89955b06-22a4-497a-ac36-04ccf184a097-sock singleContainer Debug c:\Users\DerekShaw\AppData\Roaming\Code\logs\20240205T220835\window13\exthost\ms-vscode-remote.remote-containers 1707251448293
+[12355 ms] Start: Run in container: test -d '/home/vscode/.vscode-server'
+[12398 ms] 
+[12398 ms] 
+[12398 ms] Exit code 1
+[12398 ms] Start: Run in container: test -d '/home/vscode/.vscode-remote'
+[12442 ms] 
+[12442 ms] 
+[12442 ms] Exit code 1
+[12443 ms] Start: Run in container: test ! -f '/home/vscode/.vscode-server/data/Machine/.writeMachineSettingsMarker' && set -o noclobber && mkdir -p '/home/vscode/.vscode-server/data/Machine' && { > '/home/vscode/.vscode-server/data/Machine/.writeMachineSettingsMarker' ; } 2> /dev/null
+[12491 ms] 
+[12491 ms] 
+[12491 ms] Start: Run in container: cat /home/vscode/.vscode-server/data/Machine/settings.json
+[12538 ms] 
+[12538 ms] cat: /home/vscode/.vscode-server/data/Machine/settings.json: No such file or directory
+[12538 ms] Exit code 1
+[12539 ms] Start: Run in container: test -d '/home/vscode/.vscode-server/bin/05047486b6df5eb8d44b2ecd70ea3bdf775fd937'
+[12586 ms] 
+[12586 ms] 
+[12586 ms] Exit code 1
+[12586 ms] Start: Run in container: test -d '/vscode/vscode-server/bin/linux-x64/05047486b6df5eb8d44b2ecd70ea3bdf775fd937'
+[12634 ms] 
+[12634 ms] 
+[12634 ms] Start: Run in container: mkdir -p '/home/vscode/.vscode-server/bin' && ln -snf '/vscode/vscode-server/bin/linux-x64/05047486b6df5eb8d44b2ecd70ea3bdf775fd937' '/home/vscode/.vscode-server/bin/05047486b6df5eb8d44b2ecd70ea3bdf775fd937'
+[12682 ms] 
+[12683 ms] 
+[12683 ms] Start: Run in container: /bin/sh
+[12683 ms] Start: Run in container: test -x '/home/vscode/.vscode-server/bin/05047486b6df5eb8d44b2ecd70ea3bdf775fd937/bin/helpers/check-requirements.sh'
+[12687 ms] 
+[12687 ms] 
+[12687 ms] Start: Run in container: '/home/vscode/.vscode-server/bin/05047486b6df5eb8d44b2ecd70ea3bdf775fd937/bin/helpers/check-requirements.sh'
+[12688 ms] Start: Run in container: touch '/vscode/vscode-server/bin/linux-x64/05047486b6df5eb8d44b2ecd70ea3bdf775fd937'
+[12734 ms] 
+[12734 ms] 
+[12734 ms] Start: Launching Dev Containers helper.
+[12735 ms] ssh-agent: SSH_AUTH_SOCK not set on remote host.
+[12735 ms] ssh-agent: SSH_AUTH_SOCK not set on local host.
+[12735 ms] X11 forwarding: DISPLAY not set on remote host.
+[12735 ms] X11 forwarding: DISPLAY not set on local host.
+[12735 ms] Start: Run in container: gpgconf --list-dir agent-socket
+[12781 ms] /home/vscode/.gnupg/S.gpg-agent
+[12782 ms] 
+[12782 ms] Start: Run in container: gpgconf --list-dir homedir
+[12783 ms] 
+[12783 ms] 
+[12826 ms] /home/vscode/.gnupg
+[12826 ms] 
+[12826 ms] Start: Run in container: ls '/home/vscode/.gnupg/private-keys-v1.d' 2>/dev/null
+[12878 ms] 
+[12878 ms] 
+[12878 ms] Exit code 2
+[12879 ms] Start: Run: gpgconf --list-dir agent-extra-socket
+[12926 ms] /run/user/1001/gnupg/S.gpg-agent.extra
+[12927 ms] 
+[12927 ms] Start: Run in container: mkdir -p -m 700 '/home/vscode/.gnupg'
+[12927 ms] gpg-agent: Socket in container (/home/vscode/.gnupg/S.gpg-agent) forwarded to remote host (/run/user/1001/gnupg/S.gpg-agent.extra).
+[12975 ms] 
+[12975 ms] 
+[12975 ms] Start: Run in container: command -v docker >/dev/null 2>&1
+[12975 ms] Start: Run: gpgconf --list-dir homedir
+[12980 ms] 
+[12980 ms] 
+[12980 ms] Start: Run in container: /bin/sh
+[12981 ms] userEnvProbe: loginInteractiveShell (default)
+[12981 ms] Start: Run in container: test -f '/tmp/devcontainers-be7d130d-d1f7-41d8-88c0-500f2f70beeb1707251447392/env-loginInteractiveShell.json'
+[12983 ms] /home/djshaw/.gnupg
+[12983 ms] 
+[13026 ms] 
+[13027 ms] 
+[13027 ms] Exit code 1
+[13027 ms] Start: Run in container: gpgconf --list-dir homedir
+[13027 ms] userEnvProbe: not found in cache
+[13027 ms] userEnvProbe shell: /bin/bash
+[13029 ms] Start: Run in container: echo ~
+[13074 ms] /home/vscode/.gnupg
+[13074 ms] 
+[13074 ms] Start: Run in container: # Test for /home/vscode/.ssh/known_hosts and ssh
+[13118 ms] 
+[13118 ms] 
+[13118 ms] Start: Run in container: # Test for /home/vscode/.gnupg/pubring.kbx and gpg
+[13119 ms] /home/vscode
+[13119 ms] 
+[13119 ms] Start: Run in container: cat <<'EOF-/tmp/vscode-remote-containers-2bbd5d28-6b2b-4f6c-97f5-a699ed8c07aa.js' >/tmp/vscode-remote-containers-2bbd5d28-6b2b-4f6c-97f5-a699ed8c07aa.js
+[13162 ms] 
+[13162 ms] 
+[13162 ms] 
+[13162 ms] 
+[13162 ms] Start: Run in container: # Copy /home/djshaw/.ssh/known_hosts to /home/vscode/.ssh/known_hosts
+[13174 ms] 
+[13174 ms] 
+[13174 ms] Start: Run in container: # Copy /home/djshaw/.gnupg/pubring.kbx to /home/vscode/.gnupg/pubring.kbx
+[13175 ms] Start: Run in container: command -v git >/dev/null 2>&1 && git config --system --replace-all credential.helper '!f() { /home/vscode/.vscode-server/bin/05047486b6df5eb8d44b2ecd70ea3bdf775fd937/node /tmp/vscode-remote-containers-2bbd5d28-6b2b-4f6c-97f5-a699ed8c07aa.js git-credential-helper $*; }; f' || true
+[13180 ms] 
+[13180 ms] 
+[13180 ms] Exit code 1
+[13181 ms] 
+[13181 ms] 
+[13181 ms] Start: Run in container: for pid in `cd /proc && ls -d [0-9]*`; do { echo $pid ; readlink /proc/$pid/cwd || echo ; readlink /proc/$pid/ns/mnt || echo ; cat /proc/$pid/stat | tr "
+[13231 ms] Start: Run in container: # Test for /home/vscode/.gnupg/pubring.gpg and gpg
+[13282 ms] 
+[13282 ms] 
+[13282 ms] Start: Run in container: cat '/home/vscode/.vscode-server/bin/05047486b6df5eb8d44b2ecd70ea3bdf775fd937/product.json'
+[13283 ms] Start: Run in container: cat <<'EOF-/tmp/vscode-remote-containers-server-2bbd5d28-6b2b-4f6c-97f5-a699ed8c07aa.js' >/tmp/vscode-remote-containers-server-2bbd5d28-6b2b-4f6c-97f5-a699ed8c07aa.js_1707251461576
+[13286 ms] Start: Run in container: # Copy /home/djshaw/.gnupg/pubring.gpg to /home/vscode/.gnupg/pubring.gpg
+[13288 ms] 
+[13288 ms] 
+[13292 ms] 
+[13293 ms] 
+[13293 ms] Exit code 1
+[13293 ms] Start: Run in container: cat '/home/vscode/.vscode-server/data/Machine/.connection-token-05047486b6df5eb8d44b2ecd70ea3bdf775fd937' 2>/dev/null || (umask 377 && echo 'ec62e40a-3cd6-42fb-bbd0-dfe0b207ffc1' >'/home/vscode/.vscode-server/data/Machine/.connection-token-05047486b6df5eb8d44b2ecd70ea3bdf775fd937-b5f770e9-870a-4898-a33f-26947da3d0b2' && mv -n '/home/vscode/.vscode-server/data/Machine/.connection-token-05047486b6df5eb8d44b2ecd70ea3bdf775fd937-b5f770e9-870a-4898-a33f-26947da3d0b2' '/home/vscode/.vscode-server/data/Machine/.connection-token-05047486b6df5eb8d44b2ecd70ea3bdf775fd937' && rm -f '/home/vscode/.vscode-server/data/Machine/.connection-token-05047486b6df5eb8d44b2ecd70ea3bdf775fd937-b5f770e9-870a-4898-a33f-26947da3d0b2' && cat '/home/vscode/.vscode-server/data/Machine/.connection-token-05047486b6df5eb8d44b2ecd70ea3bdf775fd937')
+[13299 ms] ec62e40a-3cd6-42fb-bbd0-dfe0b207ffc1
+[13299 ms] 
+[13299 ms] Start: Starting VS Code Server
+[13299 ms] Start: Preparing Extensions
+[13299 ms] Start: Run in container: test ! -f '/home/vscode/.vscode-server/data/Machine/.installExtensionsMarker' && set -o noclobber && mkdir -p '/home/vscode/.vscode-server/data/Machine' && { > '/home/vscode/.vscode-server/data/Machine/.installExtensionsMarker' ; } 2> /dev/null
+[13345 ms] 
+[13346 ms] 
+[13346 ms] Start: Run in container: # Test for /home/vscode/.gnupg/trustdb.gpg and gpg
+[13348 ms] Extensions cache, install extensions: ms-azuretools.vscode-docker, vscjava.vscode-java-dependency, vscjava.vscode-gradle
+[13395 ms] 
+[13396 ms] 
+[13396 ms] Start: Run in container: test -d /home/vscode/.vscode-server/extensionsCache && ls /home/vscode/.vscode-server/extensionsCache || true
+[13442 ms] 
+[13442 ms] 
+[13442 ms] Start: Run in container: # Copy /home/djshaw/.gnupg/trustdb.gpg to /home/vscode/.gnupg/trustdb.gpg
+[13444 ms] userEnvProbe PATHs:
+Probe:     '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/vscode/.local/bin'
+Container: '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+[13490 ms] 
+[13490 ms] 
+[13490 ms] Exit code 1
+[13490 ms] Start: Run in container: test -d /vscode/vscode-server/extensionsCache && ls /vscode/vscode-server/extensionsCache || true
+[13491 ms] Start: Run: gpg-connect-agent updatestartuptty /bye
+[13542 ms] 71939099-659c-4f9b-973f-3dd0b1f36de6
+bd400397-0778-4baa-8f90-7a1fbd0cc82d
+davidanson.vscode-markdownlint-0.54.0
+ms-azuretools.vscode-docker-1.28.0
+redhat.java-1.27.0-linux-x64
+visualstudioexptteam.intellicode-api-usage-examples-0.2.8
+visualstudioexptteam.intellicode-api-usage-examples-0.2.8.sigzip
+visualstudioexptteam.vscodeintellicode-1.2.30
+visualstudioexptteam.vscodeintellicode-1.2.30.sigzip
+vscjava.vscode-gradle-3.13.5
+vscjava.vscode-java-debug-0.56.0
+vscjava.vscode-java-debug-0.56.0.sigzip
+vscjava.vscode-java-dependency-0.23.4
+vscjava.vscode-java-dependency-0.23.4.sigzip
+vscjava.vscode-java-pack-0.25.15
+vscjava.vscode-java-test-0.40.1
+vscjava.vscode-java-test-0.40.1.sigzip
+vscjava.vscode-maven-0.44.0
+vscjava.vscode-maven-0.44.0.sigzip
+[13542 ms] 
+[13542 ms] Start: Run in container: mkdir -p '/tmp/devcontainers-be7d130d-d1f7-41d8-88c0-500f2f70beeb1707251447392' && cat > '/tmp/devcontainers-be7d130d-d1f7-41d8-88c0-500f2f70beeb1707251447392/env-loginInteractiveShell.json' << 'envJSON'
+[13543 ms] Extensions cache, link in container: ms-azuretools.vscode-docker-1.28.0, vscjava.vscode-gradle-3.13.5, vscjava.vscode-java-dependency-0.23.4, vscjava.vscode-java-dependency-0.23.4.sigzip
+[13590 ms] 
+[13590 ms] 
+[13590 ms] Start: Run in container: mkdir -p '/home/vscode/.vscode-server/extensionsCache' && ln -s '/vscode/vscode-server/extensionsCache'/* '/home/vscode/.vscode-server/extensionsCache' || true
+[13638 ms] 
+[13638 ms] 
+[13639 ms] Optimizing extensions for quality: stable
+[13639 ms] Start: Run in container: cd /vscode/vscode-server/extensionsCache && touch 'ms-azuretools.vscode-docker-1.28.0' 'vscjava.vscode-gradle-3.13.5' 'vscjava.vscode-java-dependency-0.23.4' 'vscjava.vscode-java-dependency-0.23.4.sigzip'
+[13640 ms] Start: Run in container: /home/vscode/.vscode-server/bin/05047486b6df5eb8d44b2ecd70ea3bdf775fd937/bin/code-server --log debug --force-disable-user-env --server-data-dir /home/vscode/.vscode-server --telemetry-level all --accept-server-license-terms --host 127.0.0.1 --port 0 --connection-token-file /home/vscode/.vscode-server/data/Machine/.connection-token-05047486b6df5eb8d44b2ecd70ea3bdf775fd937 --extensions-download-dir /home/vscode/.vscode-server/extensionsCache --install-extension ms-azuretools.vscode-docker --install-extension vscjava.vscode-java-dependency --install-extension vscjava.vscode-gradle --start-server  --skip-requirements-check
+[13686 ms] 
+[13686 ms] 
+[13750 ms] *
+* Visual Studio Code Server
+*
+* By using the software, you agree to
+* the Visual Studio Code Server License Terms (https://aka.ms/vscode-server-license) and
+* the Microsoft Privacy Statement (https://privacy.microsoft.com/en-US/privacystatement).
+*
+[13754 ms] Server bound to 127.0.0.1:40417 (IPv4)
+Extension host agent listening on 40417
+
+[13754 ms] Start: Run in container: echo 40417 >'/home/vscode/.vscode-server/data/Machine/.devport-05047486b6df5eb8d44b2ecd70ea3bdf775fd937'
+[13798 ms] 
+[13798 ms] 
+[13798 ms] Port forwarding for container port 40417 starts listening on local port.
+[13799 ms] Port forwarding local port 40417 to container port 40417
+[13809 ms] Port forwarding connection from 57601 > 40417 > 40417 in the container.
+[13809 ms] Start: Run in container: /home/vscode/.vscode-server/bin/05047486b6df5eb8d44b2ecd70ea3bdf775fd937/node -e 
+[13810 ms] Start: Run in container: # Test for /home/vscode/.gitconfig and git
+[13853 ms] 
+[13854 ms] 
+[13854 ms] Start: Run in container: # Copy /home/djshaw/.gitconfig to /home/vscode/.gitconfig
+[13901 ms] 
+[13902 ms] 
+[13902 ms] [20:31:01] 
+
+
+
+
+[13902 ms] [20:31:01] Installing extensions...
+[13902 ms] [20:31:01] Extension host agent started.
+[13904 ms] Start: Run in container: # Cleaning up git config
+[13950 ms] 
+[13950 ms] 
+[13950 ms] Start: Run in container: command -v git >/dev/null 2>&1 && git config --global --replace-all credential.helper '!f() { /home/vscode/.vscode-server/bin/05047486b6df5eb8d44b2ecd70ea3bdf775fd937/node /tmp/vscode-remote-containers-2bbd5d28-6b2b-4f6c-97f5-a699ed8c07aa.js git-credential-helper $*; }; f' || true
+[13952 ms] Port forwarding 57601 > 40417 > 40417 stderr: Connection established
+[13994 ms] 
+[13994 ms] 
+[13994 ms] [20:31:01] Started initializing default profile extensions in extensions installation folder. file:///home/vscode/.vscode-server/extensions
+[13994 ms] [20:31:01] ComputeTargetPlatform: linux-x64
+[13995 ms] [20:31:01] Completed initializing default profile extensions in extensions installation folder. file:///home/vscode/.vscode-server/extensions
+[13995 ms] [20:31:01] ComputeTargetPlatform: linux-x64
+[14008 ms] Port forwarding connection from 57602 > 40417 > 40417 in the container.
+[14009 ms] Start: Run in container: /home/vscode/.vscode-server/bin/05047486b6df5eb8d44b2ecd70ea3bdf775fd937/node -e 
+[14048 ms] [20:31:01] [127.0.0.1][3855705e][ManagementConnection] New connection established.
+[14115 ms] [20:31:01] Log level changed to info
+[14162 ms] Port forwarding 57602 > 40417 > 40417 stderr: Connection established
+[14412 ms] [20:31:01] [127.0.0.1][c84ad1af][ExtensionHostConnection] New connection established.
+[14424 ms] [20:31:01] [127.0.0.1][c84ad1af][ExtensionHostConnection] <588> Launched Extension Host Process.
+[15064 ms] [20:31:02] Installing extension 'vscjava.vscode-java-dependency'...
+[15066 ms] [20:31:02] Getting Manifest... vscjava.vscode-java-dependency
+[15071 ms] [20:31:02] Installing extension 'vscjava.vscode-gradle'...
+[20:31:02] Getting Manifest... vscjava.vscode-gradle
+[15224 ms] [20:31:02] Installing extension 'ms-azuretools.vscode-docker'...
+[20:31:02] Getting Manifest... ms-azuretools.vscode-docker
+[15446 ms] [20:31:02] Installing extension: vscjava.vscode-java-dependency
+[15447 ms] [20:31:02] Installing extension: vscjava.vscode-gradle
+[15642 ms] [20:31:03] Installing extension: ms-azuretools.vscode-docker
+[19336 ms] [20:31:06] Extension signature is verified: ms-azuretools.vscode-docker
+[19344 ms] [20:31:06] Extension signature is verified: vscjava.vscode-gradle
+[19698 ms] [20:31:07] Extracted extension to file:///home/vscode/.vscode-server/extensions/ms-azuretools.vscode-docker-1.28.0: ms-azuretools.vscode-docker
+[19699 ms] [20:31:07] Renamed to /home/vscode/.vscode-server/extensions/ms-azuretools.vscode-docker-1.28.0
+[19699 ms] [20:31:07] Extracting extension completed. ms-azuretools.vscode-docker
+[19699 ms] [20:31:07] Extension installed successfully: ms-azuretools.vscode-docker
+[19699 ms] [20:31:07] Extension 'ms-azuretools.vscode-docker' v1.28.0 was successfully installed.
+[19905 ms] Port forwarding connection from 57610 > 40417 > 40417 in the container.
+[19909 ms] Start: Run in container: /home/vscode/.vscode-server/bin/05047486b6df5eb8d44b2ecd70ea3bdf775fd937/node -e 
+[20108 ms] Port forwarding 57610 > 40417 > 40417 stderr: Connection established
+[21803 ms] [20:31:09] Extracted extension to file:///home/vscode/.vscode-server/extensions/vscjava.vscode-gradle-3.13.5: vscjava.vscode-gradle
+[21850 ms] [20:31:09] Renamed to /home/vscode/.vscode-server/extensions/vscjava.vscode-gradle-3.13.5
+[21851 ms] [20:31:09] Extracting extension completed. vscjava.vscode-gradle
+[21851 ms] [20:31:09] Extension installed successfully: vscjava.vscode-gradle
+[21851 ms] [20:31:09] Extension 'vscjava.vscode-gradle' v3.13.5 was successfully installed.
+[28167 ms] Port forwarding 57610 > 40417 > 40417 stderr: Remote close
+[28211 ms] Port forwarding 57610 > 40417 > 40417 terminated with code 0 and signal null.
